@@ -11,12 +11,10 @@
 
 #include <stdio.h>
 #include "CoilSectionData.hpp"
-#include <boost/property_tree/ptree.hpp>
-#include <boost/property_tree/xml_parser.hpp>
-#include <boost/foreach.hpp>
+#include "Phase.hpp"
+
 #include <string>
-#include <set>
-#include <exception>
+#include <vector>
 
 struct ImpModel
 {
@@ -28,8 +26,18 @@ struct ImpModel
         
     } Units;
     
+    Phase phase;
     Units units;
     CoilSection *model;
+    
+    // constructors & destructors
+    ImpModel();
+    ~ImpModel();
+    
+    std::vector<std::string> testKeys;
+    
+    // Method to initialize a model from a Mac-created XML file (ie: created using NSKeyedArchiver)
+    bool InitializeWith(const std::string &fileName);
     
 };
 

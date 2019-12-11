@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F599A8A423A130CA00138CF0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F599A8A323A130CA00138CF0 /* main.cpp */; };
-		F599A8AC23A15CF100138CF0 /* BoostTutorial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F599A8AA23A15CF100138CF0 /* BoostTutorial.cpp */; };
 		F599A8AF23A15DB200138CF0 /* ImpModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F599A8AD23A15DB200138CF0 /* ImpModel.cpp */; };
 		F599A8B723A15E3900138CF0 /* IntegrationFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = F599A8B123A15E3900138CF0 /* IntegrationFunctions.c */; };
 		F599A8B823A15E3900138CF0 /* CoilSectionData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F599A8B223A15E3900138CF0 /* CoilSectionData.cpp */; };
@@ -34,8 +33,6 @@
 /* Begin PBXFileReference section */
 		F599A8A023A130CA00138CF0 /* XML_Converter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XML_Converter; sourceTree = BUILT_PRODUCTS_DIR; };
 		F599A8A323A130CA00138CF0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		F599A8AA23A15CF100138CF0 /* BoostTutorial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BoostTutorial.cpp; sourceTree = "<group>"; };
-		F599A8AB23A15CF100138CF0 /* BoostTutorial.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BoostTutorial.hpp; sourceTree = "<group>"; };
 		F599A8AD23A15DB200138CF0 /* ImpModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ImpModel.cpp; sourceTree = "<group>"; };
 		F599A8AE23A15DB200138CF0 /* ImpModel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ImpModel.hpp; sourceTree = "<group>"; };
 		F599A8B123A15E3900138CF0 /* IntegrationFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = IntegrationFunctions.c; path = ../../BlueBookFunctions2019/IntegrationFunctions.c; sourceTree = "<group>"; };
@@ -102,8 +99,6 @@
 				F599A8B423A15E3900138CF0 /* IntegrationFunctions.h */,
 				F599A8B523A15E3900138CF0 /* PCH_BasicStructs.hpp */,
 				F599A8B623A15E3900138CF0 /* PCH_C_Logging.h */,
-				F599A8AA23A15CF100138CF0 /* BoostTutorial.cpp */,
-				F599A8AB23A15CF100138CF0 /* BoostTutorial.hpp */,
 			);
 			path = XML_Converter;
 			sourceTree = "<group>";
@@ -180,7 +175,6 @@
 				F599A8A423A130CA00138CF0 /* main.cpp in Sources */,
 				F599A8BE23A1608B00138CF0 /* Core.cpp in Sources */,
 				F599A8BB23A1606100138CF0 /* Phase.cpp in Sources */,
-				F599A8AC23A15CF100138CF0 /* BoostTutorial.cpp in Sources */,
 				F599A8B823A15E3900138CF0 /* CoilSectionData.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

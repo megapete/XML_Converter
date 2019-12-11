@@ -7,3 +7,25 @@
 //
 
 #include "ImpModel.hpp"
+
+#include "PCH_C_Logging.h"
+
+ImpModel::ImpModel()
+{
+    this->model = NULL;
+}
+
+ImpModel::~ImpModel()
+{
+    if (this->model != NULL)
+    {
+        delete[] model;
+    }
+}
+
+bool ImpModel::InitializeWith(const std::string &fileName)
+{
+    
+    
+    return true;
+}
