@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		F599A8A423A130CA00138CF0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F599A8A323A130CA00138CF0 /* main.cpp */; };
+		F599A8AC23A15CF100138CF0 /* BoostTutorial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F599A8AA23A15CF100138CF0 /* BoostTutorial.cpp */; };
+		F599A8AF23A15DB200138CF0 /* ImpModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F599A8AD23A15DB200138CF0 /* ImpModel.cpp */; };
+		F599A8B723A15E3900138CF0 /* IntegrationFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = F599A8B123A15E3900138CF0 /* IntegrationFunctions.c */; };
+		F599A8B823A15E3900138CF0 /* CoilSectionData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F599A8B223A15E3900138CF0 /* CoilSectionData.cpp */; };
+		F599A8BB23A1606100138CF0 /* Phase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F599A8B923A1606100138CF0 /* Phase.cpp */; };
+		F599A8BE23A1608B00138CF0 /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F599A8BC23A1608B00138CF0 /* Core.cpp */; };
+		F599A8C123A1609500138CF0 /* Coil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F599A8BF23A1609500138CF0 /* Coil.cpp */; };
+		F599A8C423A1620C00138CF0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F599A8C323A1620C00138CF0 /* Accelerate.framework */; };
+		F599A8C623A1622A00138CF0 /* libgsl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F599A8C523A1622A00138CF0 /* libgsl.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +34,24 @@
 /* Begin PBXFileReference section */
 		F599A8A023A130CA00138CF0 /* XML_Converter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XML_Converter; sourceTree = BUILT_PRODUCTS_DIR; };
 		F599A8A323A130CA00138CF0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F599A8AA23A15CF100138CF0 /* BoostTutorial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BoostTutorial.cpp; sourceTree = "<group>"; };
+		F599A8AB23A15CF100138CF0 /* BoostTutorial.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BoostTutorial.hpp; sourceTree = "<group>"; };
+		F599A8AD23A15DB200138CF0 /* ImpModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ImpModel.cpp; sourceTree = "<group>"; };
+		F599A8AE23A15DB200138CF0 /* ImpModel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ImpModel.hpp; sourceTree = "<group>"; };
+		F599A8B123A15E3900138CF0 /* IntegrationFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = IntegrationFunctions.c; path = ../../BlueBookFunctions2019/IntegrationFunctions.c; sourceTree = "<group>"; };
+		F599A8B223A15E3900138CF0 /* CoilSectionData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CoilSectionData.cpp; path = ../../BlueBookFunctions2019/CoilSectionData.cpp; sourceTree = "<group>"; };
+		F599A8B323A15E3900138CF0 /* CoilSectionData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CoilSectionData.hpp; path = ../../BlueBookFunctions2019/CoilSectionData.hpp; sourceTree = "<group>"; };
+		F599A8B423A15E3900138CF0 /* IntegrationFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntegrationFunctions.h; path = ../../BlueBookFunctions2019/IntegrationFunctions.h; sourceTree = "<group>"; };
+		F599A8B523A15E3900138CF0 /* PCH_BasicStructs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PCH_BasicStructs.hpp; path = ../../BlueBookFunctions2019/PCH_BasicStructs.hpp; sourceTree = "<group>"; };
+		F599A8B623A15E3900138CF0 /* PCH_C_Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCH_C_Logging.h; path = ../../BlueBookFunctions2019/PCH_C_Logging.h; sourceTree = "<group>"; };
+		F599A8B923A1606100138CF0 /* Phase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Phase.cpp; sourceTree = "<group>"; };
+		F599A8BA23A1606100138CF0 /* Phase.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Phase.hpp; sourceTree = "<group>"; };
+		F599A8BC23A1608B00138CF0 /* Core.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Core.cpp; sourceTree = "<group>"; };
+		F599A8BD23A1608B00138CF0 /* Core.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Core.hpp; sourceTree = "<group>"; };
+		F599A8BF23A1609500138CF0 /* Coil.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Coil.cpp; sourceTree = "<group>"; };
+		F599A8C023A1609500138CF0 /* Coil.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Coil.hpp; sourceTree = "<group>"; };
+		F599A8C323A1620C00138CF0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		F599A8C523A1622A00138CF0 /* libgsl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgsl.a; path = ../GNU_Scientific_Library/lib/libgsl.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F599A8C423A1620C00138CF0 /* Accelerate.framework in Frameworks */,
+				F599A8C623A1622A00138CF0 /* libgsl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +72,7 @@
 			children = (
 				F599A8A223A130CA00138CF0 /* XML_Converter */,
 				F599A8A123A130CA00138CF0 /* Products */,
+				F599A8C223A1620C00138CF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +88,33 @@
 			isa = PBXGroup;
 			children = (
 				F599A8A323A130CA00138CF0 /* main.cpp */,
+				F599A8AD23A15DB200138CF0 /* ImpModel.cpp */,
+				F599A8AE23A15DB200138CF0 /* ImpModel.hpp */,
+				F599A8BF23A1609500138CF0 /* Coil.cpp */,
+				F599A8C023A1609500138CF0 /* Coil.hpp */,
+				F599A8BC23A1608B00138CF0 /* Core.cpp */,
+				F599A8BD23A1608B00138CF0 /* Core.hpp */,
+				F599A8B923A1606100138CF0 /* Phase.cpp */,
+				F599A8BA23A1606100138CF0 /* Phase.hpp */,
+				F599A8B223A15E3900138CF0 /* CoilSectionData.cpp */,
+				F599A8B323A15E3900138CF0 /* CoilSectionData.hpp */,
+				F599A8B123A15E3900138CF0 /* IntegrationFunctions.c */,
+				F599A8B423A15E3900138CF0 /* IntegrationFunctions.h */,
+				F599A8B523A15E3900138CF0 /* PCH_BasicStructs.hpp */,
+				F599A8B623A15E3900138CF0 /* PCH_C_Logging.h */,
+				F599A8AA23A15CF100138CF0 /* BoostTutorial.cpp */,
+				F599A8AB23A15CF100138CF0 /* BoostTutorial.hpp */,
 			);
 			path = XML_Converter;
+			sourceTree = "<group>";
+		};
+		F599A8C223A1620C00138CF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F599A8C523A1622A00138CF0 /* libgsl.a */,
+				F599A8C323A1620C00138CF0 /* Accelerate.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +174,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F599A8C123A1609500138CF0 /* Coil.cpp in Sources */,
+				F599A8B723A15E3900138CF0 /* IntegrationFunctions.c in Sources */,
+				F599A8AF23A15DB200138CF0 /* ImpModel.cpp in Sources */,
 				F599A8A423A130CA00138CF0 /* main.cpp in Sources */,
+				F599A8BE23A1608B00138CF0 /* Core.cpp in Sources */,
+				F599A8BB23A1606100138CF0 /* Phase.cpp in Sources */,
+				F599A8AC23A15CF100138CF0 /* BoostTutorial.cpp in Sources */,
+				F599A8B823A15E3900138CF0 /* CoilSectionData.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,11 +238,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = /Users/peterhuber/Documents/MyProjects/BoostLibrary/include;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -228,10 +293,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = /Users/peterhuber/Documents/MyProjects/BoostLibrary/include;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -241,6 +309,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPGZ62544B;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../GNU_Scientific_Library/include\"";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../GNU_Scientific_Library/lib\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -251,6 +321,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPGZ62544B;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../GNU_Scientific_Library/include\"";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../GNU_Scientific_Library/lib\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
