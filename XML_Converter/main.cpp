@@ -6,32 +6,19 @@
 //  Copyright © 2019 Peter Huber. All rights reserved.
 //
 
-#include <boost/property_tree/ptree.hpp>
-#include <boost/property_tree/xml_parser.hpp>
-#include <boost/foreach.hpp>
-#include <string>
-#include <set>
-#include <exception>
-#include <iostream>
-#include "BoostTutorial.hpp"
+
+
+#include "ImpModel.hpp"
 
 
 
 
-
-
-int main(int argc, const char * argv[]) {
+int main(int argc, const char * argv[])
+{
     
-    try
-    {
-        debug_settings ds;
-        ds.load("/Users/peterhuber/Local Docs/MyProjects/TestXML.txt");
-        ds.save("debug_settings_out.xml");
-        std::cout << "Success\n";
-    }
-    catch (std::exception &e)
-    {
-        std::cout << "Error: " << e.what() << "\n";
-    }
+    ImpModel testXML;
+    
+    testXML.InitializeWith("/Users/peterhuber/Google Drive (huberistech@gmail.com)/Design Stuff/ImpulseSimulationProgramFIles/ImpulseSimulationDesignXML.impmdl");
+
     return 0;
 }
