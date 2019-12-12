@@ -6,7 +6,7 @@
 //  Copyright © 2019 Peter Huber. All rights reserved.
 //
 
-#define TEST_FILENAME "/Users/peterhub/Documents/MyProjects/XML.plist"
+#define TEST_FILENAME "XML.plist"
 
 #include <cstddef>
 #include <cassert>
@@ -15,10 +15,17 @@
 #include "rapidxml.hpp"
 
 #include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <pwd.h>
+#include <cstdlib>
 #include <string>
 #include <vector>
 #include <fstream>
 #include <cstdint>
+#include <filesystem>
+
+#include "ImpModel.hpp"
 
 #if defined(RAPIDXML_NO_EXCEPTIONS)
 void rapidxml::parse_error_handler(const char* what, void* where) {
@@ -36,13 +43,13 @@ void walk(const rapidxml::xml_node<>* node, int indent = 0) {
     switch(t) {
     case rapidxml::node_element:
         {
-            printf("<%.*s", node->name_size(), node->name());
+            printf("<%.*s", (int)node->name_size(), node->name());
             for(const rapidxml::xml_attribute<>* a = node->first_attribute()
                 ; a
                 ; a = a->next_attribute()
             ) {
-                printf(" %.*s", a->name_size(), a->name());
-                printf("='%.*s'", a->value_size(), a->value());
+                printf(" %.*s", (int)a->name_size(), a->name());
+                printf("='%.*s'", (int)a->value_size(), a->value());
             }
             printf(">\n");
 
@@ -52,12 +59,12 @@ void walk(const rapidxml::xml_node<>* node, int indent = 0) {
             ) {
                 walk(n, indent+1);
             }
-            printf("%s</%.*s>\n", ind.c_str(), node->name_size(), node->name());
+            printf("%s</%.*s>\n", ind.c_str(), (int)node->name_size(), node->name());
         }
         break;
 
     case rapidxml::node_data:
-        printf("DATA:[%.*s]\n", node->value_size(), node->value());
+        printf("DATA:[%.*s]\n", (int)node->value_size(), node->value());
         break;
 
     default:
@@ -94,18 +101,40 @@ std::vector<char> loadFile(const String& filename) {
 
 
 int main(int argc, const char* argv[]) {
+
+    char *homeDirectory = getenv("HOME");
     
-    const auto xmlFile = loadFile(TEST_FILENAME);
+    if (homeDirectory == NULL)
+    {
+        struct passwd *pw = getpwuid(getuid());
+        
+        homeDirectory = pw->pw_dir;
+    }
+    
+    std::string filePath(homeDirectory);
+    filePath.append("/Documents/MyProjects/");
+    filePath.append(TEST_FILENAME);
+    
+    // printf("File path: %s", filePath.c_str());
+    
+    const auto xmlFile = loadFile(filePath.c_str());
     
     if(! xmlFile.empty())
     {
-        const auto tmp = xmlFile;
+        // const auto tmp = xmlFile;
         processXmlFile(xmlFile.data());
         
         // check for const correctness
-        if(memcmp(xmlFile.data(), tmp.data(), tmp.size()) != 0)
-        {
-            printf("ERROR: xmlFile is overwritten.\n");
-        }
+        // if(memcmp(xmlFile.data(), tmp.data(), tmp.size()) != 0)
+        // {
+            // printf("ERROR: xmlFile is overwritten.\n");
+        // }
     }
+    else
+    {
+        printf("Could not open file!");
+    }
+    
+    ImpModel impModel = ImpModel();
+    // impModel.InitializeWith(filePath);
 }

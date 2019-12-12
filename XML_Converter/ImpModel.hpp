@@ -13,11 +13,30 @@
 #include "CoilSectionData.hpp"
 #include "Phase.hpp"
 
+#include <cstddef>
+#include <cassert>
+#define RAPIDXML_NO_STDLIB
+#define RAPIDXML_NO_EXCEPTIONS
+#include "rapidxml.hpp"
+
+/*
+#if defined(RAPIDXML_NO_EXCEPTIONS)
+void rapidxml::parse_error_handler(const char* what, void* where) {
+    printf("Parse error(@%p): %s\n", where, what);
+    std::abort();
+}
+#endif
+ */
+
 #include <string>
 #include <vector>
+#include <fstream>
+#include <cerrno>
+#include <cstdint>
 
 struct ImpModel
 {
+public:
     typedef enum pch_Units
     {
         inches = 0,
@@ -37,8 +56,11 @@ struct ImpModel
     std::vector<std::string> testKeys;
     
     // Method to initialize a model from a Mac-created XML file (ie: created using NSKeyedArchiver)
-    bool InitializeWith(const std::string &fileName);
+    bool InitializeWith(const std::string &filePath);
     
+private:
+    std::string GetFileContents(std::string filePath);
+    void EvaluateNode(const rapidxml::xml_node<>* node);
 };
 
 #endif /* ImpModel_hpp */
