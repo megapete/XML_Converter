@@ -31,10 +31,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D377A65523A1BF9000A3D08D /* rapidxml_utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rapidxml_utils.hpp; path = ../../../RapidXML/rapidxml_utils.hpp; sourceTree = "<group>"; };
-		D377A65623A1BF9000A3D08D /* rapidxml_iterators.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rapidxml_iterators.hpp; path = ../../../RapidXML/rapidxml_iterators.hpp; sourceTree = "<group>"; };
-		D377A65723A1BF9000A3D08D /* rapidxml_print.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rapidxml_print.hpp; path = ../../../RapidXML/rapidxml_print.hpp; sourceTree = "<group>"; };
-		D377A65823A1BF9000A3D08D /* rapidxml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rapidxml.hpp; path = ../../../RapidXML/rapidxml.hpp; sourceTree = "<group>"; };
 		F599A8A023A130CA00138CF0 /* XML_Converter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XML_Converter; sourceTree = BUILT_PRODUCTS_DIR; };
 		F599A8A323A130CA00138CF0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F599A8AD23A15DB200138CF0 /* ImpModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ImpModel.cpp; sourceTree = "<group>"; };
@@ -68,17 +64,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D377A65423A1BF6B00A3D08D /* RapidXML */ = {
-			isa = PBXGroup;
-			children = (
-				D377A65623A1BF9000A3D08D /* rapidxml_iterators.hpp */,
-				D377A65723A1BF9000A3D08D /* rapidxml_print.hpp */,
-				D377A65523A1BF9000A3D08D /* rapidxml_utils.hpp */,
-				D377A65823A1BF9000A3D08D /* rapidxml.hpp */,
-			);
-			path = RapidXML;
-			sourceTree = "<group>";
-		};
 		F599A89723A130CA00138CF0 = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +99,6 @@
 				F599A8B423A15E3900138CF0 /* IntegrationFunctions.h */,
 				F599A8B523A15E3900138CF0 /* PCH_BasicStructs.hpp */,
 				F599A8B623A15E3900138CF0 /* PCH_C_Logging.h */,
-				D377A65423A1BF6B00A3D08D /* RapidXML */,
 			);
 			path = XML_Converter;
 			sourceTree = "<group>";
@@ -319,9 +303,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPGZ62544B;
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../GNU_Scientific_Library/include\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../GNU_Scientific_Library/include\"",
+					/Users/peterhuber/Local,
+					Docs/MyProjects/RapidXML,
+				);
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../GNU_Scientific_Library/lib\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../RapidXML\"";
 			};
 			name = Debug;
 		};
@@ -331,9 +320,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPGZ62544B;
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../GNU_Scientific_Library/include\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../GNU_Scientific_Library/include\"",
+					/Users/peterhuber/Local,
+					Docs/MyProjects/RapidXML,
+				);
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../GNU_Scientific_Library/lib\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../RapidXML\"";
 			};
 			name = Release;
 		};
